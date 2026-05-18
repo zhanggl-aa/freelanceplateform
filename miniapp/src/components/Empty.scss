@@ -1,0 +1,41 @@
+@import "@/assets/styles/variables.scss";
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80rpx 40rpx;
+
+  &__image {
+    width: 240rpx;
+    height: 240rpx;
+    margin-bottom: 32rpx;
+  }
+
+  &__title {
+    font-size: 30rpx;
+    color: $text-primary;
+    font-weight: 600;
+    margin-bottom: 12rpx;
+  }
+
+  &__description {
+    font-size: 26rpx;
+    color: $text-secondary;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  &__action {
+    margin-top: 40rpx;
+    background-color: $primary;
+    border-radius: $radius-md;
+    padding: 16rpx 64rpx;
+  }
+
+  &__action-text {
+    font-size: 28rpx;
+    color: #ffffff;
+  }
+}

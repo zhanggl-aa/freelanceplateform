@@ -1,0 +1,294 @@
+@import "@/assets/styles/variables.scss";
+
+.project-detail-page {
+  min-height: 100vh;
+  background-color: $bg-page;
+  display: flex;
+  flex-direction: column;
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    font-size: 28rpx;
+    color: $text-secondary;
+  }
+
+  &__content {
+    flex: 1;
+    padding-bottom: 120rpx;
+  }
+
+  &__header {
+    background-color: $bg-white;
+    padding: 32rpx 24rpx;
+  }
+
+  &__title {
+    font-size: 36rpx;
+    font-weight: 700;
+    color: $text-primary;
+    line-height: 1.5;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    margin-top: 16rpx;
+    gap: 16rpx;
+  }
+
+  &__status {
+    font-size: 24rpx;
+    color: $primary;
+    background-color: rgba(64, 158, 255, 0.1);
+    padding: 4rpx 16rpx;
+    border-radius: 8rpx;
+  }
+
+  &__category {
+    font-size: 24rpx;
+    color: $text-secondary;
+  }
+
+  &__client {
+    display: flex;
+    align-items: center;
+    background-color: $bg-white;
+    padding: 24rpx;
+    margin-top: 16rpx;
+  }
+
+  &__client-avatar {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+  }
+
+  &__client-info {
+    flex: 1;
+  }
+
+  &__client-name {
+    font-size: 28rpx;
+    color: $text-primary;
+    font-weight: 600;
+  }
+
+  &__client-label {
+    font-size: 22rpx;
+    color: $text-secondary;
+    margin-top: 4rpx;
+  }
+
+  &__client-chat {
+    background-color: $primary;
+    border-radius: $radius-sm;
+    padding: 12rpx 28rpx;
+  }
+
+  &__client-chat-text {
+    color: #ffffff;
+    font-size: 24rpx;
+  }
+
+  &__info-row {
+    display: flex;
+    background-color: $bg-white;
+    padding: 24rpx;
+    margin-top: 16rpx;
+  }
+
+  &__info-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__info-label {
+    font-size: 22rpx;
+    color: $text-secondary;
+    margin-bottom: 8rpx;
+  }
+
+  &__info-value {
+    font-size: 28rpx;
+    font-weight: 600;
+    color: $text-primary;
+
+    &--price {
+      color: $danger;
+    }
+  }
+
+  &__section {
+    background-color: $bg-white;
+    padding: 24rpx;
+    margin-top: 16rpx;
+  }
+
+  &__section-title {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 16rpx;
+  }
+
+  &__desc {
+    font-size: 28rpx;
+    color: $text-regular;
+    line-height: 1.8;
+  }
+
+  &__tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12rpx;
+  }
+
+  &__tech-tag {
+    font-size: 24rpx;
+    color: $primary;
+    background-color: rgba(64, 158, 255, 0.1);
+    padding: 8rpx 20rpx;
+    border-radius: 8rpx;
+  }
+
+  /* Bid Form Modal */
+  &__bid-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-end;
+    z-index: 1000;
+  }
+
+  &__bid-form {
+    width: 100%;
+    background-color: $bg-white;
+    border-radius: $radius-lg $radius-lg 0 0;
+    max-height: 80vh;
+  }
+
+  &__bid-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28rpx 32rpx;
+    border-bottom: 1rpx solid $border-light;
+  }
+
+  &__bid-form-title {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__bid-form-close {
+    font-size: 36rpx;
+    color: $text-secondary;
+    padding: 8rpx;
+  }
+
+  &__bid-form-body {
+    padding: 24rpx 32rpx;
+  }
+
+  &__form-group {
+    margin-bottom: 24rpx;
+
+    &--half {
+      flex: 1;
+    }
+  }
+
+  &__form-row {
+    display: flex;
+    gap: 24rpx;
+  }
+
+  &__form-label {
+    font-size: 26rpx;
+    color: $text-regular;
+    margin-bottom: 12rpx;
+  }
+
+  &__form-textarea {
+    width: 100%;
+    height: 200rpx;
+    background-color: $bg-page;
+    border-radius: $radius-sm;
+    padding: 20rpx;
+    font-size: 28rpx;
+    box-sizing: border-box;
+  }
+
+  &__form-input {
+    width: 100%;
+    height: 72rpx;
+    background-color: $bg-page;
+    border-radius: $radius-sm;
+    padding: 0 20rpx;
+    font-size: 28rpx;
+    box-sizing: border-box;
+  }
+
+  &__bid-form-footer {
+    display: flex;
+    padding: 20rpx 32rpx;
+    padding-bottom: calc(20rpx + env(safe-area-inset-bottom));
+    gap: 20rpx;
+  }
+
+  &__bid-btn {
+    flex: 1;
+    border-radius: $radius-md;
+    font-size: 30rpx;
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--cancel {
+      background-color: $bg-page;
+      color: $text-regular;
+    }
+
+    &--submit {
+      background-color: $primary;
+      color: #ffffff;
+    }
+  }
+
+  /* Bottom Action */
+  &__bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $bg-white;
+    padding: 16rpx 32rpx;
+    padding-bottom: calc(16rpx + env(safe-area-inset-bottom));
+    box-shadow: 0 -2rpx 12rpx rgba(0, 0, 0, 0.05);
+  }
+
+  &__bottom-btn {
+    width: 100%;
+    height: 88rpx;
+    background-color: $primary;
+    color: #ffffff;
+    border-radius: $radius-md;
+    font-size: 32rpx;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

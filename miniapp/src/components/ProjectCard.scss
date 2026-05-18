@@ -1,0 +1,111 @@
+@import "@/assets/styles/variables.scss";
+
+.project-card {
+  background-color: $bg-white;
+  border-radius: $radius-md;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: $text-primary;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 16rpx;
+  }
+
+  &__status {
+    font-size: 24rpx;
+    white-space: nowrap;
+  }
+
+  &__category {
+    margin-top: 12rpx;
+  }
+
+  &__category-tag {
+    font-size: 22rpx;
+    color: $primary;
+    background-color: rgba(64, 158, 255, 0.1);
+    padding: 4rpx 16rpx;
+    border-radius: 20rpx;
+  }
+
+  &__desc {
+    font-size: 26rpx;
+    color: $text-regular;
+    margin-top: 16rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    line-height: 1.6;
+  }
+
+  &__tech {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16rpx;
+    gap: 8rpx;
+  }
+
+  &__tech-tag {
+    font-size: 22rpx;
+    color: $text-secondary;
+    background-color: $bg-page;
+    padding: 4rpx 14rpx;
+    border-radius: 6rpx;
+
+    &--more {
+      color: $primary;
+      background-color: rgba(64, 158, 255, 0.08);
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20rpx;
+    padding-top: 20rpx;
+    border-top: 1rpx solid $border-light;
+  }
+
+  &__budget-label {
+    font-size: 22rpx;
+    color: $text-secondary;
+  }
+
+  &__budget-value {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: $danger;
+    margin-left: 8rpx;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__bids {
+    font-size: 22rpx;
+    color: $text-secondary;
+  }
+
+  &__deadline {
+    font-size: 22rpx;
+    color: $text-placeholder;
+    margin-top: 4rpx;
+  }
+}

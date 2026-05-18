@@ -1,0 +1,84 @@
+@import "@/assets/styles/variables.scss";
+
+.project-list-page {
+  min-height: 100vh;
+  background-color: $bg-page;
+
+  &__tabs {
+    display: flex;
+    background-color: $bg-white;
+    padding: 0 12rpx;
+    border-bottom: 1rpx solid $border-light;
+  }
+
+  &__tab {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 24rpx 0;
+    position: relative;
+
+    &--active {
+      .project-list-page__tab-text {
+        color: $primary;
+        font-weight: 600;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 48rpx;
+        height: 4rpx;
+        background-color: $primary;
+        border-radius: 2rpx;
+      }
+    }
+  }
+
+  &__tab-text {
+    font-size: 28rpx;
+    color: $text-regular;
+  }
+
+  &__filter {
+    background-color: $bg-white;
+    padding: 16rpx 24rpx;
+    margin-bottom: 16rpx;
+  }
+
+  &__filter-picker {
+    display: flex;
+    align-items: center;
+    background-color: $bg-page;
+    border-radius: $radius-sm;
+    padding: 12rpx 20rpx;
+    width: fit-content;
+  }
+
+  &__filter-text {
+    font-size: 26rpx;
+    color: $text-regular;
+  }
+
+  &__filter-arrow {
+    font-size: 20rpx;
+    color: $text-secondary;
+    margin-left: 8rpx;
+  }
+
+  &__content {
+    padding: 0 24rpx;
+    height: calc(100vh - 180rpx);
+  }
+
+  &__loading,
+  &__no-more {
+    text-align: center;
+    padding: 32rpx 0;
+    font-size: 24rpx;
+    color: $text-secondary;
+  }
+}

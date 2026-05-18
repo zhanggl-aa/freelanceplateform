@@ -1,0 +1,65 @@
+@import "@/assets/styles/variables.scss";
+
+.dev-list-page {
+  min-height: 100vh;
+  background-color: $bg-page;
+
+  &__search {
+    padding: 20rpx 24rpx;
+    background-color: $bg-white;
+  }
+
+  &__search-input {
+    height: 68rpx;
+    background-color: $bg-page;
+    border-radius: 34rpx;
+    padding: 0 28rpx;
+    font-size: 26rpx;
+  }
+
+  &__search-placeholder {
+    color: $text-placeholder;
+    font-size: 26rpx;
+  }
+
+  &__filters {
+    display: flex;
+    background-color: $bg-white;
+    padding: 16rpx 24rpx;
+    gap: 20rpx;
+    border-bottom: 1rpx solid $border-light;
+    margin-bottom: 16rpx;
+  }
+
+  &__filter-item {
+    display: flex;
+    align-items: center;
+    background-color: $bg-page;
+    border-radius: $radius-sm;
+    padding: 10rpx 20rpx;
+  }
+
+  &__filter-text {
+    font-size: 24rpx;
+    color: $text-regular;
+  }
+
+  &__filter-arrow {
+    font-size: 18rpx;
+    color: $text-secondary;
+    margin-left: 6rpx;
+  }
+
+  &__content {
+    padding: 0 24rpx;
+    height: calc(100vh - 200rpx);
+  }
+
+  &__loading,
+  &__no-more {
+    text-align: center;
+    padding: 32rpx 0;
+    font-size: 24rpx;
+    color: $text-secondary;
+  }
+}

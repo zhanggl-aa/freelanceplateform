@@ -1,0 +1,36 @@
+services:
+  # Go Backend
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: freelance-server
+    environment:
+      - DATABASE_HOST=host.docker.internal
+      - DATABASE_PORT=5432
+      - DATABASE_USER=postgres
+      - DATABASE_PASSWORD=123456
+      - DATABASE_DBNAME=freelancedb
+    ports:
+      - "8080:8080"
+    volumes:
+      - uploads:/app/uploads
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+  # Vue Frontend
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: freelance-web
+    ports:
+      - "3002:80"
+    depends_on:
+      - server
+    restart: unless-stopped
+
+volumes:
+  # pgdata:
+  uploads:

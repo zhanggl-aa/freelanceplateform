@@ -1,0 +1,57 @@
+export default defineAppConfig({
+  pages: [
+    'pages/index/index',
+    'pages/project/list',
+    'pages/project/detail',
+    'pages/project/create',
+    'pages/developer/list',
+    'pages/developer/detail',
+    'pages/chat/list',
+    'pages/chat/detail',
+    'pages/user/index',
+    'pages/user/profile',
+    'pages/user/my-projects',
+    'pages/user/my-bids',
+    'pages/user/contracts',
+    'pages/user/wallet',
+    'pages/auth/login',
+  ],
+  tabBar: {
+    color: '#999999',
+    selectedColor: '#409EFF',
+    borderStyle: 'white',
+    backgroundColor: '#ffffff',
+    list: [
+      {
+        pagePath: 'pages/index/index',
+        text: '首页',
+        iconPath: 'assets/tab-home.png',
+        selectedIconPath: 'assets/tab-home-active.png',
+      },
+      {
+        pagePath: 'pages/project/list',
+        text: '项目',
+        iconPath: 'assets/tab-project.png',
+        selectedIconPath: 'assets/tab-project-active.png',
+      },
+      {
+        pagePath: 'pages/chat/list',
+        text: '消息',
+        iconPath: 'assets/tab-chat.png',
+        selectedIconPath: 'assets/tab-chat-active.png',
+      },
+      {
+        pagePath: 'pages/user/index',
+        text: '我的',
+        iconPath: 'assets/tab-user.png',
+        selectedIconPath: 'assets/tab-user-active.png',
+      },
+    ],
+  },
+  window: {
+    backgroundTextStyle: 'light',
+    navigationBarBackgroundColor: '#409EFF',
+    navigationBarTitleText: '接单平台',
+    navigationBarTextStyle: 'white',
+  },
+})

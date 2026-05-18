@@ -1,0 +1,121 @@
+@import "@/assets/styles/variables.scss";
+
+.project-create-page {
+  min-height: 100vh;
+  background-color: $bg-page;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    flex: 1;
+    padding: 24rpx;
+    padding-bottom: 140rpx;
+  }
+
+  &__form-group {
+    background-color: $bg-white;
+    border-radius: $radius-md;
+    padding: 24rpx;
+    margin-bottom: 20rpx;
+  }
+
+  &__label {
+    font-size: 28rpx;
+    color: $text-primary;
+    font-weight: 600;
+    margin-bottom: 16rpx;
+  }
+
+  &__input {
+    width: 100%;
+    height: 72rpx;
+    background-color: $bg-page;
+    border-radius: $radius-sm;
+    padding: 0 20rpx;
+    font-size: 28rpx;
+    box-sizing: border-box;
+
+    &--budget {
+      flex: 1;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    min-height: 240rpx;
+    background-color: $bg-page;
+    border-radius: $radius-sm;
+    padding: 20rpx;
+    font-size: 28rpx;
+    box-sizing: border-box;
+  }
+
+  &__picker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72rpx;
+    background-color: $bg-page;
+    border-radius: $radius-sm;
+    padding: 0 20rpx;
+  }
+
+  &__picker-text {
+    font-size: 28rpx;
+    color: $text-primary;
+
+    &--placeholder {
+      color: $text-placeholder;
+    }
+  }
+
+  &__picker-arrow {
+    font-size: 20rpx;
+    color: $text-secondary;
+  }
+
+  &__budget-row {
+    display: flex;
+    align-items: center;
+    gap: 16rpx;
+  }
+
+  &__budget-sep {
+    font-size: 28rpx;
+    color: $text-secondary;
+  }
+
+  &__bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    background-color: $bg-white;
+    padding: 16rpx 32rpx;
+    padding-bottom: calc(16rpx + env(safe-area-inset-bottom));
+    gap: 20rpx;
+    box-shadow: 0 -2rpx 12rpx rgba(0, 0, 0, 0.05);
+  }
+
+  &__btn {
+    flex: 1;
+    height: 88rpx;
+    border-radius: $radius-md;
+    font-size: 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--draft {
+      background-color: $bg-page;
+      color: $text-regular;
+    }
+
+    &--publish {
+      background-color: $primary;
+      color: #ffffff;
+      font-weight: 600;
+    }
+  }
+}

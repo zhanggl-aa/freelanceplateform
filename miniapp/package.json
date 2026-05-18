@@ -1,0 +1,41 @@
+{
+  "name": "freelanceplatform-miniapp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "程序员接单平台微信小程序",
+  "templateInfo": {
+    "name": "default",
+    "typescript": true,
+    "css": "sass"
+  },
+  "scripts": {
+    "build:weapp": "taro build --type weapp",
+    "dev:weapp": "taro build --type weapp --watch",
+    "build:swan": "taro build --type swan",
+    "dev:swan": "taro build --type swan --watch"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "dependencies": {
+    "@tarojs/components": "4.0.7",
+    "@tarojs/helper": "4.0.7",
+    "@tarojs/plugin-platform-weapp": "4.0.7",
+    "@tarojs/react": "4.0.7",
+    "@tarojs/runtime": "4.0.7",
+    "@tarojs/shared": "4.0.7",
+    "@tarojs/taro": "4.0.7",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@babel/runtime": "^7.24.0",
+    "@tarojs/cli": "4.0.7",
+    "@tarojs/webpack5-runner": "4.0.7",
+    "@types/react": "^18.3.0",
+    "typescript": "^5.5.0",
+    "sass": "^1.77.0"
+  }
+}

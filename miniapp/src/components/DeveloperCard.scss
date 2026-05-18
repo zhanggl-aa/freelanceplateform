@@ -1,0 +1,167 @@
+@import "@/assets/styles/variables.scss";
+
+.developer-card {
+  background-color: $bg-white;
+  border-radius: $radius-md;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 96rpx;
+    height: 96rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+    flex-shrink: 0;
+  }
+
+  &__info {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  &__name-row {
+    display: flex;
+    align-items: center;
+  }
+
+  &__name {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: $text-primary;
+    margin-right: 12rpx;
+  }
+
+  &__availability {
+    padding: 2rpx 12rpx;
+    border-radius: 12rpx;
+    display: flex;
+    align-items: center;
+  }
+
+  &__availability-text {
+    font-size: 20rpx;
+    color: #ffffff;
+  }
+
+  &__title {
+    font-size: 24rpx;
+    color: $text-secondary;
+    margin-top: 6rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20rpx;
+    gap: 8rpx;
+  }
+
+  &__skill-tag {
+    font-size: 22rpx;
+    color: $primary;
+    background-color: rgba(64, 158, 255, 0.1);
+    padding: 6rpx 16rpx;
+    border-radius: 8rpx;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20rpx;
+    padding-top: 20rpx;
+    border-top: 1rpx solid $border-light;
+  }
+
+  &__rate {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__rate-value {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: $danger;
+  }
+
+  &__rate-unit {
+    font-size: 22rpx;
+    color: $text-secondary;
+    margin-left: 4rpx;
+  }
+
+  &__stats {
+    display: flex;
+    align-items: center;
+    gap: 16rpx;
+  }
+
+  &__rating {
+    font-size: 24rpx;
+    color: $warning;
+  }
+
+  &__completed {
+    font-size: 24rpx;
+    color: $text-secondary;
+  }
+}
+
+.developer-card--horizontal {
+  width: 280rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $bg-white;
+  border-radius: $radius-md;
+  padding: 24rpx 16rpx;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+
+  &__avatar {
+    width: 96rpx;
+    height: 96rpx;
+    border-radius: 50%;
+    margin-bottom: 12rpx;
+  }
+
+  &__name {
+    font-size: 26rpx;
+    font-weight: 600;
+    color: $text-primary;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+
+  &__availability {
+    position: absolute;
+    top: 16rpx;
+    right: 16rpx;
+    width: 16rpx;
+    height: 16rpx;
+    border-radius: 50%;
+  }
+
+  &__title {
+    font-size: 22rpx;
+    color: $text-secondary;
+    margin-top: 4rpx;
+  }
+
+  &__rate {
+    font-size: 24rpx;
+    color: $danger;
+    font-weight: 600;
+    margin-top: 12rpx;
+  }
+}

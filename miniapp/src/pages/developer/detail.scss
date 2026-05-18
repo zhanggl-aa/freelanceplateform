@@ -1,0 +1,194 @@
+@import "@/assets/styles/variables.scss";
+
+.dev-detail-page {
+  min-height: 100vh;
+  background-color: $bg-page;
+  display: flex;
+  flex-direction: column;
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    font-size: 28rpx;
+    color: $text-secondary;
+  }
+
+  &__content {
+    flex: 1;
+    padding-bottom: 120rpx;
+  }
+
+  &__header {
+    display: flex;
+    background-color: $bg-white;
+    padding: 32rpx 24rpx;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    margin-right: 24rpx;
+    flex-shrink: 0;
+  }
+
+  &__header-info {
+    flex: 1;
+  }
+
+  &__name {
+    font-size: 36rpx;
+    font-weight: 700;
+    color: $text-primary;
+  }
+
+  &__title {
+    font-size: 26rpx;
+    color: $text-secondary;
+    margin-top: 8rpx;
+  }
+
+  &__header-row {
+    display: flex;
+    align-items: center;
+    gap: 20rpx;
+    margin-top: 12rpx;
+  }
+
+  &__availability {
+    font-size: 22rpx;
+    color: $success;
+    background-color: rgba(103, 194, 58, 0.1);
+    padding: 4rpx 16rpx;
+    border-radius: 8rpx;
+  }
+
+  &__rate {
+    font-size: 28rpx;
+    color: $danger;
+    font-weight: 600;
+  }
+
+  &__stats {
+    display: flex;
+    background-color: $bg-white;
+    padding: 24rpx;
+    margin-top: 16rpx;
+  }
+
+  &__stat-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__stat-value {
+    font-size: 34rpx;
+    font-weight: 700;
+    color: $text-primary;
+  }
+
+  &__stat-label {
+    font-size: 22rpx;
+    color: $text-secondary;
+    margin-top: 8rpx;
+  }
+
+  &__section {
+    background-color: $bg-white;
+    padding: 24rpx;
+    margin-top: 16rpx;
+  }
+
+  &__section-title {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 16rpx;
+  }
+
+  &__bio {
+    font-size: 28rpx;
+    color: $text-regular;
+    line-height: 1.8;
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12rpx;
+  }
+
+  &__skill-tag {
+    font-size: 24rpx;
+    color: $primary;
+    background-color: rgba(64, 158, 255, 0.1);
+    padding: 8rpx 20rpx;
+    border-radius: 8rpx;
+  }
+
+  &__portfolio-item {
+    padding: 20rpx 0;
+    border-bottom: 1rpx solid $border-light;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__portfolio-title {
+    font-size: 28rpx;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__portfolio-desc {
+    font-size: 24rpx;
+    color: $text-secondary;
+    margin-top: 8rpx;
+    line-height: 1.6;
+  }
+
+  &__portfolio-images {
+    display: flex;
+    gap: 12rpx;
+    margin-top: 12rpx;
+  }
+
+  &__portfolio-img {
+    width: 200rpx;
+    height: 150rpx;
+    border-radius: $radius-sm;
+  }
+
+  &__bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $bg-white;
+    padding: 16rpx 32rpx;
+    padding-bottom: calc(16rpx + env(safe-area-inset-bottom));
+    box-shadow: 0 -2rpx 12rpx rgba(0, 0, 0, 0.05);
+  }
+
+  &__bottom-btn {
+    width: 100%;
+    height: 88rpx;
+    background-color: $primary;
+    border-radius: $radius-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__bottom-btn-text {
+    color: #ffffff;
+    font-size: 32rpx;
+    font-weight: 600;
+  }
+}
